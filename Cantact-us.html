@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Cantact-us.css" />
+    <title>Kontakt</title>
+  </head>
+  <body>
+    <header>
+      <div class="right-side">
+        <div class="left-side">Redo24</div>
+        <ul>
+          <li><a href="Index.html">Hem</a></li>
+          <li><a href="About-us.html">Om-oss</a></li>
+          <li><a href="#">Kontakta</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="form-container">
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="eventName">Företags Namn:</label>
+          <input type="text" name="eventName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="eventName">Organisationsnummer:</label>
+          <input type="text" name="eventName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="eventName">E-mail:</label>
+          <input type="text" name="eventName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="eventName">Tel:</label>
+          <input type="text" name="eventName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="category">Antal anställda:</label>
+          <select name="category" required>
+            <option value="total">0</option>
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="two">3</option>
+            <option value="two">4</option>
+            <option value="two">5</option>
+            <option value="two">6+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="description"
+            >Omsättning & Verifikationer per månad:</label
+          >
+          <textarea name="description" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="agenda">Ditt Önskemål:</label>
+          <textarea id="agenda" name="agenda" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="eventDate">Önskad datum för kontakt</label>
+          <input type="date" name="eventDate" required />
+        </div>
+
+        <div class="form-group">
+          <label for="category">Hur vill du bli kontaktad ?</label>
+          <select name="category" required>
+            <option value="Kontakt">Frivilligt</option>
+            <option value="utbi">E-Mail</option>
+            <option value="work">Tel</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Skicka" />
+        </div>
+      </form>
+    </div>
+    <footer>
+      <p class="copy">© 2023 Redo24 AB</p>
+    </footer>
+  </body>
+</html>

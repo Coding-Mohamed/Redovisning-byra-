@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
+
+:root {
+  --font-text: "Poppins", sans-serif;
+  --font-header: "Playfair Display", serif;
+  --main: #ffad84;
+  --cards: #ffc47e;
+  --secondery: #ffe382;
+  --final: #fff78a;
+  --extra: #e3d081;
+  --btn-color: #0090c1;
+  --equal-color: #a6a15e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url(Event-image/global-image.jpg);
+  background-size: cover;
+  background-position: center; */
+  background: #fff78a;
+  background: linear-gradient(190deg, #fff78a 0%, #ffad84 80%);
+  background: -webkit-linear-gradient(190deg, #fff78a 0%, #ffad84 80%);
+  background: -moz-linear-gradient(190deg, #fff78a 0%, #ffad84 80%);
+}
+
+header {
+  overflow: hidden;
+  background-color: var(--main);
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+}
+
+.left-side {
+  position: absolute;
+  left: 2.5rem;
+  font-size: 2.5rem;
+  font-family: Rubik Bubbles;
+}
+
+.right-side {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right-side ul li {
+  display: inline;
+  margin: 0.5rem;
+  padding: 0;
+}
+
+.right-side ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  padding: 0.8rem 0.4rem; /* Add padding to create space around the text */
+  display: inline-block; /* Ensure the elements are displayed as blocks */
+  border-radius: 0.4rem;
+}
+
+.right-side ul li a:hover {
+  background-color: var(--secondery);
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 10rem auto;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+}
+
+.form-container::before {
+  content: "Vänligen fyll i formuläret för att kunna påbörja vårt samarbete.";
+  position: absolute;
+  background-color: var(--equal-color);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-header);
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+  font-family: var(--font-header);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  font-family: var(--font-header);
+}
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+}
+.form-group input[type="submit"] {
+  background-color: var(--btn-color);
+  margin-top: 0.4rem;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+.form-group input[type="submit"]:hover {
+  background-color: #34495e;
+}
+
+.form-group input[type="date"] {
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  border: none;
+}
+
+select {
+  border: none;
+  padding: 0.3rem;
+  font-size: 1.1rem;
+  border-radius: 0.3rem;
+}
+
+textarea {
+  border-radius: 0.3rem;
+}
+
+footer {
+  font-size: 2rem;
+  font-family: var(--font-header);
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: -5rem;
+}

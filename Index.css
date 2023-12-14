@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
+
+:root {
+  --font-text: "Poppins", sans-serif;
+  --font-header: "Playfair Display", serif;
+  --main: #ffad84;
+  --cards: #ffc47e;
+  --secondery: #ffe382;
+  --final: #fff78a;
+  --extra: #e3d081;
+  --btn-color: #0090c1;
+  --equal-color: #a6a15e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url(Event-image/global-image.jpg);
+  background-size: cover;
+  background-position: center; */
+  background: #fff78a;
+  background: linear-gradient(190deg, #fff78a 0%, #ffad84 80%);
+  background: -webkit-linear-gradient(190deg, #fff78a 0%, #ffad84 80%);
+  background: -moz-linear-gradient(190deg, #fff78a 0%, #ffad84 80%);
+}
+/* header style start from here */
+header {
+  overflow: hidden;
+  background-color: var(--main);
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+}
+
+header::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  left: 20%;
+  right: 10%;
+  top: -30%;
+  background-image: url(Event-image/chart.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+  clip-path: circle(30% at 50% 25%);
+}
+
+.left-side {
+  position: absolute;
+  left: 2.5rem;
+  font-size: 2.5rem;
+  font-family: Rubik Bubbles;
+}
+
+.right-side {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right-side ul li {
+  display: inline;
+  margin: 0.5rem;
+  padding: 0;
+}
+
+.right-side ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  padding: 0.8rem 0.4rem; /* Add padding to create space around the text */
+  display: inline-block; /* Ensure the elements are displayed as blocks */
+  border-radius: 0.4rem;
+}
+
+.right-side ul li a:hover {
+  background-color: var(--secondery);
+}
+/* header style ends here */
+
+/* main cards style starts here */
+
+.event-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 8rem;
+  margin-top: 18rem;
+}
+
+.event-section::before {
+  content: "Håll koll på din ekonomi och se hur vi kan hjälpa dig.";
+  position: absolute;
+  background-color: var(--equal-color);
+  top: 48%;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+  font-family: var(--font-header);
+}
+
+.event {
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+}
+
+.event img {
+  max-width: 100%;
+  aspect-ratio: 1.5;
+  object-fit: cover;
+}
+
+.event h3 {
+  background-color: #756c14;
+  color: var(--final);
+  margin-top: -0.3rem;
+  font-family: var(--font-header);
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.event p {
+  padding: 10px;
+  font-size: 1.1rem;
+  font-family: var(--font-text);
+}
+
+.event .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #524004;
+  margin: 1rem 0.5rem;
+  color: white;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--font-header);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--equal-color);
+    color: black;
+  }
+}
+
+footer {
+  margin-top: 7rem;
+  font-size: 2rem;
+  font-family: var(--font-header);
+}
+
+@media (max-width: 768px) {
+  .event-section .event {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  header::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    left: 20%;
+    right: 10%;
+    top: -30%;
+    background-image: url(Images/chart.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+    clip-path: circle(30% at 50% 25%);
+  }
+}
+
+@media (max-width: 700px) {
+  header::after {
+    display: none;
+  }
+  .event-section::before {
+    content: "Håll koll på din ekonomi och se hur vi kan hjälpa dig.";
+    position: absolute;
+    background-color: var(--equal-color);
+    top: 20%;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    font-family: var(--font-header);
+  }
+  .event-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 8rem;
+    margin-top: 5rem;
+  }
+}
+
+/* main cards style ends here */
